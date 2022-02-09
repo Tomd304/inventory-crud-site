@@ -11,7 +11,7 @@ var ItemSchema = new Schema({
 });
 
 ItemSchema.virtual("url").get(function () {
-  return "/inventory/item" + this._id;
+  return "/inventory/item/" + this._id;
 });
 
 ItemSchema.virtual("price_formatted").get(function () {
