@@ -1,13 +1,13 @@
-let createError = require("http-errors");
-let express = require("express");
-let path = require("path");
-let cookieParser = require("cookie-parser");
-let logger = require("morgan");
+var createError = require("http-errors");
+var express = require("express");
+var path = require("path");
+var cookieParser = require("cookie-parser");
+var logger = require("morgan");
 
-let indexRouter = require("./routes/index");
-let inventoryRouter = require("./routes/inventory");
+var indexRouter = require("./routes/index");
+var inventoryRouter = require("./routes/inventory");
 
-let app = express();
+var app = express();
 
 //Set up mongoose connection
 var mongoose = require("mongoose");

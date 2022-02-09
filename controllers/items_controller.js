@@ -1,4 +1,4 @@
-let Items = require("../models/item");
+var Items = require("../models/item");
 
 exports.index = (req, res, next) => {
   Items.find().exec((err, items) => {

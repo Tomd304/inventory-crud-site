@@ -1,7 +1,7 @@
-let mongoose = require("mongoose");
-let Schema = mongoose.Schema;
+var mongoose = require("mongoose");
+var Schema = mongoose.Schema;
 
-let ItemSchema = new Schema({
+var ItemSchema = new Schema({
   name: { type: String },
   description: { type: String },
   price: { type: Number },
@@ -10,8 +10,12 @@ let ItemSchema = new Schema({
   picture: { type: String },
 });
 
-ItemSchema.virtual("url").get(() => {
+ItemSchema.virtual("url").get(function () {
   return "/inventory/item" + this._id;
+});
+
+ItemSchema.virtual("price_formatted").get(function () {
+  return "£" + this.price.toFixed(2);
 });
 
 module.exports = mongoose.model("Item", ItemSchema);
