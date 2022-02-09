@@ -1,0 +1,22 @@
+doctype html 
+
+html(lang='en')
+  head
+    title= title
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    link(rel='stylesheet', href='/stylesheets/style.css')
+
+  body
+    div(class="bar")
+      h1(class="nav-title")=title
+    div(class="content")
+      div(class="card-container")
+        div(class="card")
+          a(href=item.url) #{item.name}
+          img(src=item.picture class="card-img")
+          h3=item.price_formatted
+          h5=item.description
+          h1=item.quantity
+
+    div(class="bar")
