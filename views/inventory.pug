@@ -8,5 +8,10 @@ html(lang='en')
     link(rel='stylesheet', href='/stylesheets/style.css')
 
   body
-    h1=title 
-    p Welcome to #{title}
+    div(class="bar")
+      h1(class="nav-title")=title
+    div(class="content")
+      ul
+        each item in items 
+          li= item.name
+    div(class="bar")

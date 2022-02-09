@@ -7,6 +7,7 @@ let ItemSchema = new Schema({
   price: { type: Number },
   quantity: { type: Number },
   category: [{ type: Schema.Types.ObjectID, ref: "Category" }],
+  picture: { type: String },
 });
 
 ItemSchema.virtual("url").get(() => {

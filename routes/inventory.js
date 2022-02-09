@@ -1,9 +1,8 @@
 let express = require("express");
 let router = express.Router();
+let items_controller = require("../controllers/items_controller");
 
 /* GET home page. */
-router.get("/", function (req, res, next) {
-  res.redirect("inventory");
-});
+router.get("/", items_controller.index);
 
 module.exports = router;
