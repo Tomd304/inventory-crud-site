@@ -14,7 +14,8 @@ html(lang='en')
       ul(class="card-container")
         each item in items 
           div(class="card")
-            h2=item.name 
+            a(href=item.url) #{item.name}
+              
             img(src=item.picture class="card-img")
             h3=item.price_formatted
             h5=item.description
