@@ -8,6 +8,10 @@ router.get("/", items_controller.index);
 
 router.get("/item/:id", items_controller.item_detail);
 
+router.post("/item/:id/update", items_controller.item_update_send);
+
+router.get("/item/:id/update", items_controller.item_update);
+
 router.get("/category/:id", categories_controller.category_list);
 
 module.exports = router;

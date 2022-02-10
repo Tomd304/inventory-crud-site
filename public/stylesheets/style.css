@@ -28,6 +28,12 @@ a {
   height: 100px;
 }
 
+.detail-img {
+  align-self: center;
+  height: 400px;
+}
+
+
 .content li {
   color: black;
   list-style: none;
@@ -56,4 +62,14 @@ a {
   border: 1px solid black;
   padding: 20px 10px;
   text-align: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+form textarea {
+  height: 200px;
 }

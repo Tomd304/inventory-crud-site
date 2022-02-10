@@ -1,0 +1,28 @@
+doctype html 
+
+html(lang='en')
+  head
+    title= title
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    link(rel='stylesheet', href='/stylesheets/style.css')
+
+  body
+    div(class="top-bar")
+      h1(class="nav-title")=title
+    div(class="content")
+      div(class="card-container")
+          img(src=item.picture class="detail-img")
+          form(method="POST" action="")
+            input(value=item.name name="nameInput")
+            input(value=item.price_formatted name="priceInput")
+            textarea(name="descriptionInput")=item.description
+            h2 Quantity: 
+              input(value=item.quantity name="quantityInput")
+            h2 Category: 
+              select(name="categoryInput")
+                each category in categories
+                  option(value=category._id) #{category.name}
+            button() Send Update
+    div(class="btm-bar")
+      a(href="/") Home

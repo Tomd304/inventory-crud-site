@@ -12,13 +12,14 @@ html(lang='en')
       h1(class="nav-title")=title
     div(class="content")
       div(class="card-container")
-        div(class="card")
-          a(href=item.url) #{item.name}
-          img(src=item.picture class="card-img")
-          h3=item.price_formatted
-          h5=item.description
-          h1=item.quantity
-          h1=item.category.name
-
+          img(src=item.picture class="detail-img")
+          div
+            h1=item.name
+            h3=item.price_formatted
+            h5=item.description
+            h2 Quantity: #{item.quantity}
+            h2 Category: #{item.category.name}
+            a(href=item.url+"/update") Update
+            button(style="margin-left:10px") Delete
     div(class="btm-bar")
       a(href="/") Home
