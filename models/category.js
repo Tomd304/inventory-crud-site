@@ -7,7 +7,7 @@ var CatergorySchema = new Schema({
 });
 
 CatergorySchema.virtual("url").get(function () {
-  return "/inventory/catalog/" + this._id;
+  return "/inventory/category/" + this._id;
 });
 
 module.exports = mongoose.model("Category", CatergorySchema);

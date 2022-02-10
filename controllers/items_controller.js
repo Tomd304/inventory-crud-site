@@ -3,9 +3,12 @@ var Category = require("../models/category");
 
 // MAIN PAGE / - SHOWS LIST OF ALL ITEMS
 exports.index = (req, res, next) => {
-  Items.find().exec((err, items) => {
-    res.render("inventory", { title: "Inventory", items: items });
-  });
+  Items.find()
+    .populate("category")
+    .sort("category")
+    .exec((err, items) => {
+      res.render("inventory", { title: "Inventory", items: items });
+    });
 };
 
 // ITEM DETAIL PAGE /item/:id - SHOWS ITEM DETAIL

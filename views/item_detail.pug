@@ -8,7 +8,7 @@ html(lang='en')
     link(rel='stylesheet', href='/stylesheets/style.css')
 
   body
-    div(class="bar")
+    div(class="top-bar")
       h1(class="nav-title")=title
     div(class="content")
       div(class="card-container")
@@ -20,4 +20,5 @@ html(lang='en')
           h1=item.quantity
           h1=item.category.name
 
-    div(class="bar")
+    div(class="btm-bar")
+      a(href="/") Home

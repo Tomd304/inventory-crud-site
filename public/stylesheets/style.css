@@ -16,7 +16,7 @@ a {
   color: #00B7FF;
 }
 
-.bar {
+.btm-bar, .top-bar {
   height: 10%;
   background-color: #333;
   padding-left: 10%;
