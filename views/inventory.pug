@@ -18,8 +18,8 @@ html(lang='en')
             img(src=item.picture class="card-img")
             h3=item.price_formatted
             h5=item.description
-            hr
-            a(href=item.category.url) #{item.category.name}
+            a(style="margin-top:auto" href=item.category.url) #{item.category.name}
 
     div(class="btm-bar")
-      a(href="/") Home
+      a(href="/") Home 
+      a(href="/inventory/create") Create Item

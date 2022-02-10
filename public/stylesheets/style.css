@@ -24,6 +24,20 @@ a {
   align-items: center;
 }
 
+.top-bar {
+  justify-content: space-between;
+  padding-right: 10%;
+}
+
+.btm-bar {
+  gap: 30px;
+}
+
+.top-bar select {
+  background-color: #fff;
+  color: #333
+}
+
 .card-img {
   height: 100px;
 }
@@ -71,5 +85,29 @@ form {
 }
 
 form textarea {
-  height: 200px;
+  height: 150px;
+}
+
+.create-form {
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  border: 1px solid #333;
+  border-radius: 6px;
+  padding: 15px;
+}
+
+.label-group {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.label-group label {
+  width: 120px;
+}
+
+.label-group input, textarea {
+  width: 200px;
 }

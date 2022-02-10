@@ -20,6 +20,6 @@ html(lang='en')
             h2 Quantity: #{item.quantity}
             h2 Category: #{item.category.name}
             a(href=item.url+"/update") Update
-            button(style="margin-left:10px") Delete
+            a(href=item.url+"/delete" style="margin-left:10px") Delete
     div(class="btm-bar")
       a(href="/") Home

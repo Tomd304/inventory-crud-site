@@ -1,0 +1,39 @@
+doctype html 
+
+html(lang='en')
+  head
+    title= title
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    link(rel='stylesheet', href='/stylesheets/style.css')
+
+  body
+    div(class="top-bar")
+      h1(class="nav-title")=title
+    div(class="content")
+      div(class="card-container")
+        form(method="POST" class="create-form" action="")
+          div(class="label-group")
+            label(for="nameInput") Item Name
+            input(placeholder="Plain Black T Shirt" name="nameInput")
+          div(class="label-group")
+            label(for="priceInput") Item Price
+            input(placeholder="20.49" name="priceInput")
+          div(class="label-group")
+            label(for="descriptionInput") Description
+            textarea(placeholder="Carhartt is a workwear brand, with a wider fit in the chest and shoulders. If you prefer a closer fit to the body, take the next size down." name="descriptionInput")
+          div(class="label-group")
+            label(for="quantityInput") Item Quantity
+            input(placeholder="4" name="quantityInput")
+          div(class="label-group")
+            label(for="categoryInput") Item Category
+            select(name="categoryInput")
+              each category in categories
+                option(value=category._id) #{category.name}
+          div(class="label-group")
+            label(for="pictureInput") Picture URL
+            input(placeholder="https://www.images.com/image123" name="pictureInput")
+          button Create Item
+
+    div(class="btm-bar")
+      a(href="/") Home

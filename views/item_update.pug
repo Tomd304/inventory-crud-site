@@ -20,9 +20,13 @@ html(lang='en')
             h2 Quantity: 
               input(value=item.quantity name="quantityInput")
             h2 Category: 
-              select(name="categoryInput")
+              select(name="categoryInput" default)
                 each category in categories
-                  option(value=category._id) #{category.name}
+                  if item.category.name != category.name 
+                    option(value=category._id) #{category.name}
+                  else 
+                    option(value=category._id selected="selected") #{category.name}
+                  
             button() Send Update
     div(class="btm-bar")
       a(href="/") Home

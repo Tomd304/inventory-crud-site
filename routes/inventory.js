@@ -12,6 +12,12 @@ router.post("/item/:id/update", items_controller.item_update_send);
 
 router.get("/item/:id/update", items_controller.item_update);
 
+router.get("/item/:id/delete", items_controller.item_delete);
+
 router.get("/category/:id", categories_controller.category_list);
+
+router.get("/create", items_controller.item_create);
+
+router.post("/create", items_controller.item_create_send);
 
 module.exports = router;
