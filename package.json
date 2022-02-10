@@ -5,7 +5,7 @@
   },
   "private": true,
   "scripts": {
-    "start": "DEBUG=inventory-crud-site:* nodemon ./bin/www"
+    "start": "DEBUG=inventory-crud-site:* node ./bin/www"
   },
   "dependencies": {
     "async": "^3.2.3",
